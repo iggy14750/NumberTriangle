@@ -1,4 +1,4 @@
-#Mininum-Sum Numeric Triangle
+#Minimum-Sum Numeric Triangle
 
 ###**Problem:**
 
