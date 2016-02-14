@@ -9,7 +9,7 @@ public class NumTriangle {
         for (int i = 0; i<numRows; i++) {
             myTriangle[i] = new int[i+1];
             for (int j = 0; j<(i+1); j++) {
-                t = (109*t)%2*BOUND;
+                t = (109*t)%(2*BOUND);
                 myTriangle[i][j] = t-BOUND;
             }
         }
