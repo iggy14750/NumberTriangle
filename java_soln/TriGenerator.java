@@ -1,7 +1,7 @@
 import java.util.Random;
 
 public class NumTriangle {
-    private final int BOUND=50;
+    final int BOUND=50;
     public static int[][] newModular(int numRows, int seed) {
         int[][] myTriangle = new int[numRows][];
         int t = seed;
