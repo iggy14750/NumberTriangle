@@ -1,7 +1,8 @@
 import java.util.Random;
 
-public class NumTriangle {
-    final int BOUND=50;
+public class TriGenerator {
+    final static int BOUND=50;
+    
     public static int[][] newModular(int numRows, int seed) {
         int[][] myTriangle = new int[numRows][];
         int t = seed;
@@ -26,5 +27,30 @@ public class NumTriangle {
             }
         }
         return myTriangle;
+    }
+    
+    //Purely for my testing purposes.
+    public static void main(String[] args) {
+        
+        System.out.println("Here is a triangle generated using modular arithmetic");
+        
+        int[][] newData = TriGenerator.newModular(5,3);
+        for (int[] row: newData) {
+            
+            for (int number: row) {
+                System.out.print(number + " ");
+            }
+            System.out.println();
+        }
+        System.out.println("Now here is one made with RANDOM numbers.");
+        newData = TriGenerator.newRandom(5);
+        
+        for (int[] row: newData) {
+            
+            for (int number: row) {
+                System.out.print(number + " ");
+            }
+            System.out.println();
+        }
     }
 }
