@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class LeastSubTri{
+public class LeastSubTri {
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter number of rows for your triangle.");
