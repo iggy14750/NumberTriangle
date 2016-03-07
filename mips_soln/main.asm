@@ -12,8 +12,8 @@ main:
         li      $v0,5
         syscall
         move    $a0,$v0
-
-        jal     new_random
+        li      $a1,7
+        jal     new_mod
         move    $a0,$v0
         
         jal     partial_sums
@@ -64,8 +64,8 @@ loop2:
         #the row sum is (i+k, j+k+1) - (i+k, j)
 loop3:
         add     $t0,$s2,$s5     #$t0 <- current_row = meta*+k
-        beqz    $t0,exit3       #while (current_row!=null)
         lw      $t1,($t0)       #$t1 <- current_col
+        beqz    $t1,exit3       #while (current_col!=null)
         add     $t1,$t1,$s4     #current_col += j
         lw      $t2,($t1)       #$t2 <- left_side
         add     $t1,$t1,$s5     #current_col += k
