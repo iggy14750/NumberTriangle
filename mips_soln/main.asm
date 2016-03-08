@@ -3,7 +3,7 @@
 .data
 start_msg: .asciiz "How many rows would you like: "
 end_msg:   .asciiz "Here is the base address of the triangle: "
-soln_msg:  .asciiz "Here is the solution I came up with: "
+soln_msg:  .asciiz "\nHere is the solution I came up with: "
 .text
 main:
         la      $a0,start_msg
@@ -86,7 +86,7 @@ exit3:
         
 exit2:
         addi    $s3,$s3,4       #i++
-        addi    $s1,$s1,4       #meta*++
+        addi    $s2,$s2,4       #meta*++       #changed both registers from s1 to s2
         j   loop1
         
 exit1:
@@ -98,6 +98,14 @@ exit1:
 ##################################
 #           THE END              #
 ##################################
+        
+        la $a0, soln_msg
+        li $v0, 4
+        syscall
+        
+        move $a0, $s0
+        li $v0, 1
+        syscall
         
         li      $v0,10
         syscall
