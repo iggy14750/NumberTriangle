@@ -6,7 +6,7 @@ This prompt was lifted from [Project Euler #150](https://projecteuler.net/proble
 
 ####Details
 
-This project belongs to Isaac B Goss and Kyle Legters for our COE 0147 Computer Organization and Assembly Language midterm project.  
+This project belongs to Isaac B Goss and Kyle Legters for our COE 0147 Computer Organization and Assembly Language midterm project.  Note that significant insparation was drawn from another ameture mathematician, [nayuki](https://github.com/nayuki), and [his or her solution](https://github.com/nayuki/Project-Euler-solutions/blob/master/java/p150.java).
 
 "Psuedo"-code in this document will probably be recorded in Python, although the project is implemented in Java and then MIPS assembly.  A useful Python module is also provided to calculate some things regarding this project.
 
