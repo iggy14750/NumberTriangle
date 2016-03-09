@@ -11,12 +11,12 @@ public class LeastSubTri {
 		System.out.print("\nYour Triangle:\n");
 		int[][] newTri = TriGenerator.newModular(rows, seed);
 		for(int i=0; i<newTri.length; i++){
-			System.out.println();
+			//System.out.println();
 			for(int j=0; j<newTri[i].length; j++){
-				System.out.print(newTri[i][j] + " ");
+				//System.out.print(newTri[i][j] + " ");
 			}
 		}
-		System.out.println();
+		//System.out.println();
 		
 		int[][] partialSums = new int[rows][];
 		for(int i=0; i<partialSums.length; i++){
@@ -31,9 +31,9 @@ public class LeastSubTri {
 				} else{
 					partialSums[i][j] = partialSums[i][j-1] + newTri[i][j-1];
 				}
-                System.out.print(partialSums[i][j] + " ");
+                //System.out.print(partialSums[i][j] + " ");
 			}
-            System.out.println();
+            //System.out.println();
 		}
 		
 		int minSum = 100000;
@@ -50,7 +50,7 @@ public class LeastSubTri {
                     if (tempSum < minSum) {
                         minSum = tempSum;
                     }
-                    System.out.println("minSum: " + minSum + " tempSum: " + tempSum);
+                    //System.out.println("minSum: " + minSum + " tempSum: " + tempSum);
                 }
 			}
 		}
