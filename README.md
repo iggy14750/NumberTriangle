@@ -76,4 +76,11 @@ The rest is a matter of comparison and keeping the current winner.
 
 ####Conclusion
 
-[RESULTS WILL BE PLACED HERE]
+In order to implement the MIPS Assembly Solution to the problem, a way needed to be developed to implement a 2-dimensional, ragged array.  To do this, all of the data was kept in a single linear array, but different memory locations in the array were kept in a meta-array, to point to the beginnings of the second dimension arrays.  The meta array is initialized to hold a number of memory locations equal to the number of rows in the triangle, plus one extra value:
+```
+addi $a0, $s1, 1    #$s1 holds number of rows
+sll $a0, $a0, 2
+li $v0, 9
+syscall
+```
+The first n-1 words in meta-array hold memory locations of the first value in each new row of the partial sums array.  This way we have a pointer to immediately access each new row of the array.  The meta-array is then ended with a zero valued word, so that when meta-array[j]=0, the loop knows to terminate.  Using the meta array to represent the 2-dimensional partial sums array, the rest of the program then loops through to find the least sub triangle in the same way as the above java solution. 
