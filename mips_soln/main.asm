@@ -72,6 +72,7 @@ loopm2:
         addi    $t3,$t3,4       #triangle* += 1
         lw      $t0,4($s2)      #while (meta[i][j+1]!=meta[i+1]) {
         beq     $t0,$t3,exitm2
+        beqz    $t0,exitm2	#ADDED TO FIX INFINITE LOOP
         
         li      $s1,0           #current_sum = 0
         li      $s5,0           #k = 0
